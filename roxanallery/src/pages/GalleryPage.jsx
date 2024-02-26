@@ -1,8 +1,12 @@
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Gallery/NavBar";
+import Introduction from "../components/Gallery/introduction";
 
 const GalleryPage = () => {
   return (
-    <Navbar />
+    <>
+      <Navbar />
+      <Introduction />
+    </>
   );
 };
 export default GalleryPage;
