@@ -1,4 +1,5 @@
 import Navbar from "../components/Gallery/NavBar";
+import Section from "../components/Gallery/Section";
 import Introduction from "../components/Gallery/introduction";
 
 const GalleryPage = () => {
@@ -6,6 +7,7 @@ const GalleryPage = () => {
     <>
       <Navbar />
       <Introduction />
+      <Section />
     </>
   );
 };

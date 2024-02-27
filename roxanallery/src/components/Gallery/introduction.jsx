@@ -8,8 +8,12 @@ const Introduction = () => {
         typeSpeed={60}
         backSpeed={60}
         strings={[
-          "¡Hola!", "esta es mi galeria", "estos son mis trabajos mas destacados."
+          "¡Hola!",
+          "esta es mi galeria",
+          "estos son mis trabajos mas destacados.",
         ]}
+        loop={true}
+        backDelay={1000}
       ></ReactTyped>
     </div>
   );
