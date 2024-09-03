@@ -17,7 +17,7 @@ const HomePage = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center ">
         <h1 className="text-purple-300 text-6xl font-bold h-20">
           <ReactTyped
-            typeSpeed={60}
+            typeSpeed={30}
             backSpeed={60}
             strings={["¡Hola!", "¡Bienvenido!", "esta es", "¡Roxana Gallery!"]}
           ></ReactTyped>
