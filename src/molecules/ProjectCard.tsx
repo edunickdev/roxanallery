@@ -38,7 +38,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Persistent dark gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-roxana-bg via-roxana-bg/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
       {/* Hover overlay */}
       <motion.div
@@ -76,10 +76,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             }}
             transition={{ duration: 0.35, delay: 0.05 }}
           >
-            <span className="font-sans text-xs text-roxana-muted tracking-widest">
+            <span className="font-sans text-xs text-white/60 tracking-widest">
               {project.year}
             </span>
-            <span className="text-roxana-highlight text-lg font-thin">→</span>
+            <span className="text-roxana-primary text-lg font-thin">→</span>
           </motion.div>
         </AnimatePresence>
       </div>

@@ -21,7 +21,6 @@ export const ProjectDetail: React.FC = () => {
     }
   }, [selectedProject]);
 
-  // Close on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeDetail();
@@ -107,14 +106,14 @@ export const ProjectDetail: React.FC = () => {
                 <aside className="lg:border-l lg:border-roxana-primary/30 lg:pl-10 space-y-8">
                   <div>
                     <Eyebrow className="mb-2">Cliente</Eyebrow>
-                    <p className="font-sans text-white">
+                    <p className="font-sans text-roxana-text">
                       {selectedProject.client}
                     </p>
                   </div>
 
                   <div>
                     <Eyebrow className="mb-2">Año</Eyebrow>
-                    <p className="font-sans text-white">
+                    <p className="font-sans text-roxana-text">
                       {selectedProject.year}
                     </p>
                   </div>
@@ -125,7 +124,7 @@ export const ProjectDetail: React.FC = () => {
                       {selectedProject.services.map((service) => (
                         <li key={service} className="flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-roxana-primary flex-shrink-0" />
-                          <span className="font-sans text-sm text-white/80">
+                          <span className="font-sans text-sm text-roxana-text-soft">
                             {service}
                           </span>
                         </li>

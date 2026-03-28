@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useUIStore } from "@/store/useUIStore";
+import { useThemeStore } from "@/store/useThemeStore";
 import { useScrollNavigation } from "@/hooks/useScrollNavigation";
 
 const NAV_LINKS = [
@@ -12,6 +13,7 @@ const NAV_LINKS = [
 export const Navbar: React.FC = () => {
   useScrollNavigation();
   const isScrolled = useUIStore((s) => s.isNavScrolled);
+  const { theme, toggleTheme } = useThemeStore();
 
   const handleNavClick = (href: string) => {
     const el = document.querySelector(href);
@@ -38,22 +40,22 @@ export const Navbar: React.FC = () => {
       {/* Logo */}
       <Link
         to="/"
-        className="font-serif italic text-2xl text-roxana-highlight tracking-wide hover:text-white transition-colors duration-300"
+        className="font-serif italic text-2xl text-roxana-primary tracking-wide hover:text-roxana-highlight transition-colors duration-300"
       >
         RE
       </Link>
 
-      {/* Nav links */}
-      <nav className="flex items-center gap-10">
+      {/* Nav links + Theme toggle */}
+      <nav className="flex items-center gap-8">
         {NAV_LINKS.map((link) => (
           <button
             key={link.label}
             onClick={() => handleNavClick(link.href)}
             className="
               relative font-sans text-sm tracking-widest uppercase
-              text-roxana-muted hover:text-white
+              text-roxana-muted hover:text-roxana-text
               transition-colors duration-300 cursor-pointer
-              group
+              group hidden md:block
             "
           >
             {link.label}
@@ -65,6 +67,31 @@ export const Navbar: React.FC = () => {
             />
           </button>
         ))}
+
+        {/* Theme toggle */}
+        <button
+          onClick={toggleTheme}
+          aria-label={
+            theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
+          }
+          className="
+            relative w-10 h-10 flex items-center justify-center
+            rounded-full border border-roxana-border
+            text-roxana-muted hover:text-roxana-text hover:border-roxana-primary
+            transition-all duration-300 cursor-pointer
+            bg-roxana-surface/50
+          "
+        >
+          <motion.span
+            key={theme}
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="text-base"
+          >
+            {theme === "dark" ? "☀" : "☾"}
+          </motion.span>
+        </button>
       </nav>
     </motion.header>
   );

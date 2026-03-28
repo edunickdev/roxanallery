@@ -22,7 +22,7 @@ export const FilterChip: React.FC<FilterChipProps> = ({ category }) => {
         ${
           isActive
             ? "bg-roxana-primary border-roxana-primary text-white"
-            : "bg-transparent border-roxana-border text-roxana-muted hover:border-roxana-primary hover:text-white"
+            : "bg-transparent border-roxana-border text-roxana-muted hover:border-roxana-primary hover:text-roxana-text"
         }
       `}
     >

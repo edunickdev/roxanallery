@@ -34,15 +34,15 @@ export const HeroSection: React.FC = () => {
 
       {/* Background glow */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-roxana-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-roxana-highlight/05 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-roxana-highlight/5 rounded-full blur-[80px] pointer-events-none" />
 
       {/* Grid lines */}
       <div
         className="absolute inset-0 pointer-events-none z-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, #7B2FBE 1px, transparent 1px),
-            linear-gradient(to bottom, #7B2FBE 1px, transparent 1px)
+            linear-gradient(to right, var(--color-primary) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--color-primary) 1px, transparent 1px)
           `,
           backgroundSize: "80px 80px",
         }}
@@ -62,13 +62,11 @@ export const HeroSection: React.FC = () => {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif font-thin tracking-[0.12em] text-5xl lg:text-7xl xl:text-8xl text-white uppercase leading-[1.05]"
+            className="font-serif font-thin tracking-[0.12em] text-5xl lg:text-7xl xl:text-8xl text-roxana-text uppercase leading-[1.05]"
           >
             Roxana
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-roxana-primary to-roxana-highlight">
-              Espinoza
-            </span>
+            <span className="text-roxana-primary">Espinoza</span>
           </motion.h1>
 
           {/* Divider */}
@@ -103,7 +101,7 @@ export const HeroSection: React.FC = () => {
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
             className="absolute top-0 right-0 w-[80%] h-[85%] overflow-hidden animate-float"
-            style={{ boxShadow: "0 25px 80px rgba(123, 47, 190, 0.25)" }}
+            style={{ boxShadow: "0 25px 80px rgba(249, 150, 189, 0.20)" }}
           >
             <img
               src={HERO_IMAGES.main}
@@ -123,7 +121,7 @@ export const HeroSection: React.FC = () => {
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
             className="absolute bottom-0 left-0 w-[42%] h-[48%] overflow-hidden"
-            style={{ boxShadow: "0 16px 50px rgba(147, 51, 234, 0.40)" }}
+            style={{ boxShadow: "0 16px 50px rgba(92, 41, 8, 0.35)" }}
           >
             <img
               src={HERO_IMAGES.secondary}

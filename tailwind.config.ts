@@ -1,19 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         roxana: {
-          bg: "#0A0A0F",
-          surface: "#1A0A2E",
-          "surface-light": "#2A1040",
-          primary: "#7B2FBE",
-          "primary-hover": "#9333EA",
-          highlight: "#C084FC",
-          glow: "#9333EA",
-          muted: "#7C7C8A",
-          border: "#3D1A6B",
+          bg: "var(--color-bg)",
+          surface: "var(--color-surface)",
+          "surface-light": "var(--color-surface-light)",
+          primary: "var(--color-primary)",
+          "primary-hover": "var(--color-primary-hover)",
+          highlight: "var(--color-highlight)",
+          glow: "var(--color-glow)",
+          muted: "var(--color-muted)",
+          border: "var(--color-border)",
+          text: "var(--color-text)",
+          "text-soft": "var(--color-text-soft)",
         },
       },
       fontFamily: {

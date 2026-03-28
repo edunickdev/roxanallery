@@ -41,9 +41,13 @@ export const AboutSection: React.FC = () => (
         className="space-y-6"
       >
         <Eyebrow>Sobre mí</Eyebrow>
-        <Heading level="h2" italic className="text-4xl lg:text-5xl text-white">
+        <Heading
+          level="h2"
+          italic
+          className="text-4xl lg:text-5xl text-roxana-text"
+        >
           Diseño que{" "}
-          <span className="text-roxana-highlight">cuenta historias</span>
+          <span className="text-roxana-primary">cuenta historias</span>
         </Heading>
         <Body muted className="leading-loose">
           Soy Roxana Espinoza, diseñadora gráfica con más de 8 años de
@@ -64,7 +68,7 @@ export const AboutSection: React.FC = () => (
             ["40+", "Clientes\nsatisfechos"],
           ].map(([num, label]) => (
             <div key={num}>
-              <p className="font-serif text-3xl text-roxana-highlight font-thin">
+              <p className="font-serif text-3xl text-roxana-primary font-thin">
                 {num}
               </p>
               <p className="font-sans text-xs tracking-wider text-roxana-muted mt-1 whitespace-pre-line uppercase">

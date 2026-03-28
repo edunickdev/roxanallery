@@ -46,7 +46,7 @@ export const Body: React.FC<BodyProps> = ({
   <p
     className={`
       font-sans leading-relaxed
-      ${muted ? "text-roxana-muted" : "text-white/80"}
+      ${muted ? "text-roxana-muted" : "text-roxana-text-soft"}
       ${className}
     `}
   >

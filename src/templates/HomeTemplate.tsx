@@ -7,7 +7,7 @@ import { Footer } from "@/organisms/Footer";
 import { ProjectDetail } from "@/organisms/ProjectDetail";
 
 export const HomeTemplate: React.FC = () => (
-  <div className="min-h-screen bg-roxana-bg text-white">
+  <div className="min-h-screen bg-roxana-bg text-roxana-text transition-colors duration-400">
     <Navbar />
     <main>
       <HeroSection />
@@ -16,7 +16,6 @@ export const HomeTemplate: React.FC = () => (
       <ContactSection />
     </main>
     <Footer />
-    {/* Global modal – lives at template level so it overlays everything */}
     <ProjectDetail />
   </div>
 );

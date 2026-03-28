@@ -17,7 +17,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-roxana-primary text-white border border-roxana-primary hover:bg-roxana-primary-hover hover:border-roxana-primary-hover",
   outline:
-    "bg-transparent text-white border border-roxana-primary hover:bg-roxana-primary/10",
+    "bg-transparent text-roxana-text border border-roxana-primary hover:bg-roxana-primary/10",
   ghost:
     "bg-transparent text-roxana-highlight border border-transparent hover:border-roxana-border",
 };

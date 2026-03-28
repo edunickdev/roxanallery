@@ -22,9 +22,9 @@ export const ProjectGrid: React.FC = () => {
       <div className="mb-14">
         <Eyebrow className="mb-4">Portfolio</Eyebrow>
         <div className="flex items-baseline gap-4 flex-wrap">
-          <Heading level="h2" className="text-5xl lg:text-6xl text-white">
+          <Heading level="h2" className="text-5xl lg:text-6xl text-roxana-text">
             Mi{" "}
-            <em className="text-roxana-highlight not-italic italic font-thin">
+            <em className="text-roxana-primary not-italic italic font-thin">
               Trabajo
             </em>
           </Heading>
@@ -71,7 +71,6 @@ export const ProjectGrid: React.FC = () => {
             transition={{ duration: 0.4 }}
             className="space-y-4"
           >
-            {/* Build rows of staggered cards */}
             {filteredProjects.length === 0 ? (
               <p className="font-sans text-center text-roxana-muted py-16 tracking-widest">
                 No hay proyectos en esta categoría.
@@ -121,11 +120,10 @@ export const ProjectGrid: React.FC = () => {
   );
 };
 
-// ─── Helper: split projects into rows of alternating 2/3 ─────────────────────
 function chunkRows<T>(items: T[]): T[][] {
   const rows: T[][] = [];
   let i = 0;
-  let rowPattern = 0; // 0 = row of 2, 1 = row of 3
+  let rowPattern = 0;
   while (i < items.length) {
     const size = rowPattern % 2 === 0 ? 2 : 3;
     rows.push(items.slice(i, i + size));

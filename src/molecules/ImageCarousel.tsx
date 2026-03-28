@@ -40,7 +40,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
                 absolute left-4 top-1/2 -translate-y-1/2
                 w-10 h-10 flex items-center justify-center
                 bg-roxana-bg/70 border border-roxana-border
-                text-white hover:bg-roxana-primary/70
+                text-roxana-text hover:bg-roxana-primary/70
                 transition-all duration-300 cursor-pointer
               "
               aria-label="Imagen anterior"
@@ -53,7 +53,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
                 absolute right-4 top-1/2 -translate-y-1/2
                 w-10 h-10 flex items-center justify-center
                 bg-roxana-bg/70 border border-roxana-border
-                text-white hover:bg-roxana-primary/70
+                text-roxana-text hover:bg-roxana-primary/70
                 transition-all duration-300 cursor-pointer
               "
               aria-label="Siguiente imagen"
@@ -77,7 +77,10 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               <motion.div
                 animate={{
                   width: i === currentIndex ? 24 : 8,
-                  backgroundColor: i === currentIndex ? "#7B2FBE" : "#3D1A6B",
+                  backgroundColor:
+                    i === currentIndex
+                      ? "var(--color-primary)"
+                      : "var(--color-border)",
                 }}
                 transition={{ duration: 0.3 }}
                 className="h-1.5 rounded-full"

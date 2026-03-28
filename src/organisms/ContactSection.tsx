@@ -11,7 +11,6 @@ export const ContactSection: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // TODO: Replace with POST /api/contact
     await new Promise((r) => setTimeout(r, 800));
     setSending(false);
     setSubmitted(true);
@@ -26,7 +25,7 @@ export const ContactSection: React.FC = () => {
           <Heading
             level="h2"
             italic
-            className="text-4xl lg:text-5xl text-white"
+            className="text-4xl lg:text-5xl text-roxana-text"
           >
             Contacto
           </Heading>
@@ -41,7 +40,7 @@ export const ContactSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center py-10"
           >
-            <p className="font-serif italic text-2xl text-roxana-highlight">
+            <p className="font-serif italic text-2xl text-roxana-primary">
               ¡Mensaje enviado!
             </p>
             <Body className="mt-2" muted>
@@ -49,7 +48,7 @@ export const ContactSection: React.FC = () => {
             </Body>
             <button
               onClick={() => setSubmitted(false)}
-              className="mt-6 font-sans text-xs tracking-widest uppercase text-roxana-muted hover:text-white cursor-pointer"
+              className="mt-6 font-sans text-xs tracking-widest uppercase text-roxana-muted hover:text-roxana-text cursor-pointer"
             >
               Enviar otro mensaje
             </button>
@@ -67,7 +66,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="Tu nombre"
                   className="
                     w-full bg-transparent border-b border-roxana-border
-                    px-0 py-3 font-sans text-sm text-white
+                    px-0 py-3 font-sans text-sm text-roxana-text
                     placeholder:text-roxana-border
                     focus:outline-none focus:border-roxana-primary
                     transition-colors duration-300
@@ -84,7 +83,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="tu@email.com"
                   className="
                     w-full bg-transparent border-b border-roxana-border
-                    px-0 py-3 font-sans text-sm text-white
+                    px-0 py-3 font-sans text-sm text-roxana-text
                     placeholder:text-roxana-border
                     focus:outline-none focus:border-roxana-primary
                     transition-colors duration-300
@@ -102,7 +101,7 @@ export const ContactSection: React.FC = () => {
                 placeholder="¿De qué se trata?"
                 className="
                   w-full bg-transparent border-b border-roxana-border
-                  px-0 py-3 font-sans text-sm text-white
+                  px-0 py-3 font-sans text-sm text-roxana-text
                   placeholder:text-roxana-border
                   focus:outline-none focus:border-roxana-primary
                   transition-colors duration-300
@@ -120,7 +119,7 @@ export const ContactSection: React.FC = () => {
                 placeholder="Cuéntame sobre tu proyecto..."
                 className="
                   w-full bg-transparent border-b border-roxana-border
-                  px-0 py-3 font-sans text-sm text-white
+                  px-0 py-3 font-sans text-sm text-roxana-text
                   placeholder:text-roxana-border resize-none
                   focus:outline-none focus:border-roxana-primary
                   transition-colors duration-300
